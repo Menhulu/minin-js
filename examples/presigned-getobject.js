@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
- // Note: YOUR-ACCESSKEYID, YOUR-SECRETACCESSKEY, my-bucketname and my-objectname
- // are dummy values, please replace them with original values.
+// Note: YOUR-ACCESSKEYID, YOUR-SECRETACCESSKEY, my-bucketname and my-objectname
+// are dummy values, please replace them with original values.
 
 var Minio = require('minio')
 
 var s3Client = new Minio.Client({
-  endPoint: 's3.amazonaws.com',
-  accessKey: 'YOUR-ACCESSKEYID',
-  secretKey: 'YOUR-SECRETACCESSKEY',
-  useSSL: true // Default is true.
+  endPoint: '10.170.224.157',
+  accessKey: 'A5041U3JGA4LXD7N',
+  secretKey: 'PTBWH0BD6SG28QXX',
+  useSSL: false // Default is true.
 })
 
 // Presigned get object URL for my-objectname at my-bucketname, it expires in 7 days by default.
-var presignedUrl = s3Client.presignedGetObject('my-bucketname', 'my-objectname', 1000, function(e, presignedUrl) {
+var presignedUrl = s3Client.presignedGetObject('jit-edge', 'dist.tar.gz', 1000, function (e, presignedUrl) {
   if (e) return console.log(e)
   console.log(presignedUrl)
 })

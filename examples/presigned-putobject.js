@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
- // Note: YOUR-ACCESSKEYID, YOUR-SECRETACCESSKEY, my-bucketname and my-objectname
- // are dummy values, please replace them with original values.
+// Note: YOUR-ACCESSKEYID, YOUR-SECRETACCESSKEY, my-bucketname and my-objectname
+// are dummy values, please replace them with original values.
 
 var Minio = require('minio')
 
 var s3Client = new Minio.Client({
-  endPoint: 's3.amazonaws.com',
-  accessKey: 'YOUR-ACCESSKEYID',
-  secretKey: 'YOUR-SECRETACCESSKEY',
+  endPoint: '10.170.224.157',
+  accessKey: 'A5041U3JGA4LXD7N',
+  secretKey: 'PTBWH0BD6SG28QXX',
   useSSL: true // Default is true.
 })
 
-var presignedUrl = s3Client.presignedPutObject('my-bucketname', 'my-objectname', 1000, function(e, presignedUrl) {
+var presignedUrl = s3Client.presignedPutObject('jit-edge', 'my-objectname', 1000, function (e, presignedUrl) {
   if (e) return console.log(e)
   console.log(presignedUrl)
 })

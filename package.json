@@ -56,6 +56,7 @@
     "gulp-eslint": "^6.0.0",
     "gulp-mocha": "^6.0.0",
     "gulp-sourcemaps": "^2.6.5",
+    "minio": "^7.0.18",
     "mocha": "^6.2.0",
     "mocha-steps": "^1.1.0",
     "nock": "^10.0.6",
